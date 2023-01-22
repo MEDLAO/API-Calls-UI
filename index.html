@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Accueil - JustStreamit</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" async></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header-conteneur">
+       <h1 class="title-box">JustStreamit</h1>
+       <nav class="menu-box">
+        <a href="">Accueil</a>
+        <a href="">Catégories</a>
+       </nav>
+    </header>
+    <nav id="titre-video">
+        <a id="first-film"></a>
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div id="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>JustStreamit</h2>
+                </div>
+            </div>
+          
+        </div>
+        <button type="button" onclick="alert('FILM')">Play</button>
+    </nav>
+    <main>
+        <section>
+            <h1>Films les mieux notés</h1>
+            <div class="conteneur">
+                <div class="scroll-images1">
+                <button class="left" onclick="leftScroll()">&#x2190</button>
+                <a  class="boxone"></a>
+                <a  class="boxtwo"></a>
+                <a  class="boxthree"></a>
+                <a  class="boxfour"></a>
+                <a  class="boxfive"></a>
+                <a  class="boxsix"></a>
+                <a  class="boxseven"></a>
+                <button class="right" onclick="rightScroll()">&#x2192</button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h1>Aventure</h1>
+            <div class="conteneur">
+                <div class="scroll-images2">
+                <button class="left" onclick="leftScroll2()">&#x2190</button>
+                <a  class="boxone"></a>
+                <a  class="boxtwo"></a>
+                <a  class="boxthree"></a>
+                <a  class="boxfour"></a>
+                <a  class="boxfive"></a>
+                <a  class="boxsix"></a>
+                <a  class="boxseven"></a>
+                <button class="right" onclick="rightScroll2()">&#x2192</button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h1>Animation</h1>
+            <div class="conteneur">
+                <div class="scroll-images3">
+                <button class="left" onclick="leftScroll3()">&#x2190</button>
+                <a  class="boxone"></a>
+                <a  class="boxtwo"></a>
+                <a  class="boxthree"></a>
+                <a  class="boxfour"></a>
+                <a id="fifth-film" class="boxfive"></a>
+                <div id="myModal2" class="modal">
+
+                    <!-- Modal content -->
+                    <div id="modal-content2">
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <h2>JustStreamit</h2>
+                        </div>
+                    </div>
+                  
+                  </div>
+                <a  class="boxsix"></a>
+                <a  class="boxseven"></a>
+                <button class="right" onclick="rightScroll3()">&#x2192</button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h1>Biographie</h1>
+            <div class="conteneur">
+                <div class="scroll-images4">
+                <button class="left" onclick="leftScroll4()">&#x2190</button>
+                <a  class="boxone"></a>
+                <a  class="boxtwo"></a>
+                <a  class="boxthree"></a>
+                <a  class="boxfour"></a>
+                <a  class="boxfive"></a>
+                <a  class="boxsix"></a>
+                <a  class="boxseven"></a>
+                <button class="right" onclick="rightScroll4()">&#x2192</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <a href="https://www.instagram.com/">Instagram</a>
+        <a href="https://www.twitter.com/">Twitter</a>
+    </footer>
+</body>
+
+</html>
