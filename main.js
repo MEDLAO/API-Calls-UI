@@ -45,51 +45,89 @@ fetch('http://localhost:8000/api/v1/titles?sort_by=-imdb_score')
         const navBestFilm = document.querySelector("#first-film");
         navBestFilm.appendChild(imageElement);
 
-        const modalText = document.querySelector("#modal-content");
+        const idBestFilm = bestFilm.id;
 
-        const imageFirstFilm = document.createElement("img");
-        imageFirstFilm.src = bestFilmImageUrl;
-        modalText.appendChild(imageFirstFilm);
+        fetch(`http://localhost:8000/api/v1/titles/${idBestFilm}`)
+            .then((response) => response.json())
+            .then((data) => {
 
-        const titleFirstFilm = bestFilm.title;
-        const titleFilm = document.createElement("p");
-        titleFilm.innerText = `Titre : ${titleFirstFilm}`;        
-        modalText.appendChild(titleFilm);
+                const modalText = document.querySelector("#modal-content");
 
-        const genreFirstFilm = bestFilm.genres;
-        const genreFilm = document.createElement("p");
-        genreFilm.innerText = `Genre : ${genreFirstFilm}`;        
-        modalText.appendChild(genreFilm);
+                const imageFirstFilm = document.createElement("img");
+                imageFirstFilm.src = bestFilmImageUrl;
+                modalText.appendChild(imageFirstFilm);
 
-        const yearFirstFilm = bestFilm.year;
-        const yearFilm = document.createElement("p");
-        yearFilm.innerText = `Année de sortie : ${yearFirstFilm}`;        
-        modalText.appendChild(yearFilm);
+                const synopsisFirstFilm = data.description;
+                const  synopsisFilm = document.createElement("p");
+                synopsisFilm.innerText = `Résumé du film : ${synopsisFirstFilm}`;
+                modalText.appendChild(synopsisFilm);
 
-        const votesFirstFilm = bestFilm.votes;
-        const votesFilm = document.createElement("p");
-        votesFilm.innerText = `Votes : ${votesFirstFilm}`;        
-        modalText.appendChild(votesFilm);
+                const titleFirstFilm = bestFilm.title;
+                const titleFilm = document.createElement("p");
+                titleFilm.innerText = `Titre : ${titleFirstFilm}`;        
+                modalText.appendChild(titleFilm);
 
-        const scoreFirstFilm = bestFilm.imdb_score;
-        const scoreFilm = document.createElement("p");
-        scoreFilm.innerText = `Score : ${scoreFirstFilm}`;        
-        modalText.appendChild(scoreFilm);
+                const genreFirstFilm = bestFilm.genres;
+                const genreFilm = document.createElement("p");
+                genreFilm.innerText = `Genre : ${genreFirstFilm}`;        
+                modalText.appendChild(genreFilm);
 
-        const directorsFirstFilm = bestFilm.directors;
-        const directorsFilm = document.createElement("p");
-        directorsFilm.innerText = `Réalisateur(s) : ${directorsFirstFilm}`;        
-        modalText.appendChild(directorsFilm);
+                const yearFirstFilm = bestFilm.year;
+                const yearFilm = document.createElement("p");
+                yearFilm.innerText = `Année de sortie : ${yearFirstFilm}`;        
+                modalText.appendChild(yearFilm);
 
-        const actorsFirstFilm = bestFilm.actors;
-        const actorsFilm = document.createElement("p");
-        actorsFilm.innerText = `Acteurs : ${actorsFirstFilm}`;        
-        modalText.appendChild(actorsFilm);
+                const votesFirstFilm = bestFilm.votes;
+                const votesFilm = document.createElement("p");
+                votesFilm.innerText = `Votes : ${votesFirstFilm}`;        
+                modalText.appendChild(votesFilm);
 
-        const writersFirstFilm = bestFilm.writers;
-        const writersFilm = document.createElement("p");
-        writersFilm.innerText = `Scénariste(s) : ${writersFirstFilm}`;        
-        modalText.appendChild(writersFilm);
+                const scoreFirstFilm = bestFilm.imdb_score;
+                const scoreFilm = document.createElement("p");
+                scoreFilm.innerText = `Score : ${scoreFirstFilm}`;        
+                modalText.appendChild(scoreFilm);
+
+                const directorsFirstFilm = bestFilm.directors;
+                const directorsFilm = document.createElement("p");
+                directorsFilm.innerText = `Réalisateur(s) : ${directorsFirstFilm}`;        
+                modalText.appendChild(directorsFilm);
+
+                const actorsFirstFilm = bestFilm.actors;
+                const actorsFilm = document.createElement("p");
+                actorsFilm.innerText = `Acteurs : ${actorsFirstFilm}`;        
+                modalText.appendChild(actorsFilm);
+
+                const writersFirstFilm = bestFilm.writers;
+                const writersFilm = document.createElement("p");
+                writersFilm.innerText = `Scénariste(s) : ${writersFirstFilm}`;        
+                modalText.appendChild(writersFilm);
+
+                const ratedFirstFilm = data.rated;
+                const  ratedFilm = document.createElement("p");
+                ratedFilm.innerText = `Classement : ${ratedFirstFilm}`;
+                modalText.appendChild(ratedFilm);
+
+                const durationFirstFilm = data.duration;
+                const durationFilm = document.createElement("p");
+                durationFilm.innerText = `Durée : ${durationFirstFilm} minutes`;
+                modalText.appendChild(durationFilm);
+
+                const originCountryFirstFilm = data.countries;
+                const  originCountryFilm = document.createElement("p");
+                originCountryFilm.innerText = `Pays d'origine : ${originCountryFirstFilm}`;
+                modalText.appendChild(originCountryFilm);
+
+                const incomeFirstFilm = data.worldwide_gross_income;
+                const  incomeFilm = document.createElement("p");
+                incomeFilm.innerText = `Résultat au Box Office : ${incomeFirstFilm}`;
+                modalText.appendChild(incomeFilm);
+
+
+
+
+            })
+
+        
 
         /* const para = document.createElement("p");
         const element = document.querySelector("#modal-content");
