@@ -1,11 +1,11 @@
 ## Project : Develop a user interface for a web application.
 
 <p>
-  <img src="pictures/JustStreamIt-wireframe.png" width="290" height="300" />
-  <img src="pictures/JustStreamIt-website-1.png" width="290" height="300" />
-  <img src="pictures/JustStreamIt-website-2.png" width="290" height="300" />
-  <img src="pictures/JustStreamIt-website-3.png" width="290" height="300" />
-  <img src="pictures/JustStreamIt-website-4.png" width="290" height="300" />
+  <img src="pictures/JustStreamIt-wireframe.png" width="280" height="300" />
+  <img src="pictures/JustStreamIt-website-1.png" width="280" height="300" />
+  <img src="pictures/JustStreamIt-website-2.png" width="280" height="300" />
+  <img src="pictures/JustStreamIt-website-3.png" width="280" height="300" />
+  <img src="pictures/JustStreamIt-website-4.png" width="280" height="300" />
 </p>
 
 ### Table of contents :
